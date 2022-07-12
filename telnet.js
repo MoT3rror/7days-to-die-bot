@@ -32,5 +32,6 @@ module.exports.CallServerCommand = async (command, waitFor) => {
         })
         .catch(error => {
             console.log(error)
+            return error
         })
 }

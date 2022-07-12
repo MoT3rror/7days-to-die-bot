@@ -1,7 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
-const { Telnet } = require('telnet-client')
 const { CallServerCommand } = require('../telnet')
-const config = require('./../config.json')
 
 module.exports = {
 	data: new SlashCommandBuilder()
