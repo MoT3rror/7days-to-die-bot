@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config.json');
+const { token, allowedUsers } = require('./config.json');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -21,6 +21,11 @@ client.once('ready', () => {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
+
+	if (!allowedUsers.includes(interaction.user.id)) {
+		console.log(interaction.user.id)
+		return interaction.reply('You are not allowed.')
+	}
 
 	const command = client.commands.get(interaction.commandName);
 

@@ -4,5 +4,6 @@
     "guildId": "",
     "telnetHost": "",
     "telnetPort": "",
-    "telnetPassword": ""
+    "telnetPassword": "",
+    "allowedUsers": []
 }
