@@ -1,5 +1,8 @@
 {
     "token": "",
     "clientId": "",
-    "guildId": ""
+    "guildId": "",
+    "telnetHost": "",
+    "telnetPort": "",
+    "telnetPassword": ""
 }
