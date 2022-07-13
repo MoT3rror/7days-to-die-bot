@@ -23,6 +23,10 @@ module.exports.CallServerCommand = async (command, waitFor) => {
                 .then(() => {
                     return connection.send(command, {waitFor: waitFor})
                         .then((response) => {
+                            if (command === 'shutdown') {
+                                return response
+                            }
+
                             return wait(2000).then(() => {
                                 connection.send('exit', {waitFor: ''})
                                 return response

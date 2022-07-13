@@ -8,6 +8,7 @@
     "discord-api-types": "^0.33.5",
     "discord.js": "^13.8.1",
     "nodemon": "^2.0.19",
+    "ps-node": "^0.1.6",
     "telnet-client": "^2.0.3"
   },
   "name": "7days-to-die-bot",
